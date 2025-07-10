@@ -5,12 +5,14 @@ const multer = require('multer');
 const connectDB = require('./utils/db');
 const policyRoutes = require('./routes/policyRoutes');
 const schedulerRoutes = require('./routes/schedulerRoutes');
+const monitorCPU = require("./utils/cpuMonitor");
 
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
 connectDB();
+monitorCPU();
 
 app.use(express.json());
 app.use('/api/policy', policyRoutes);

@@ -1,6 +1,6 @@
 # Insure Board
 
-A backend service to upload, process, and manage insurance policy data from CSV/XLSX files using Node.js, MongoDB & worker threads.
+A Node.js backend to upload, process, and manage insurance policy data from CSV/XLSX using MongoDB, worker threads, and real-time CPU utilization monitoring.
 
 ---
 
@@ -11,6 +11,7 @@ A backend service to upload, process, and manage insurance policy data from CSV/
 - Worker Threads
 - Multer, XLSX, CSV Parser
 - node-schedule (timed DB inserts)
+- os-utils (system info)
 
 ---
 
@@ -28,7 +29,7 @@ MONGO_URI=<your_mongo_uri>
 3. **Start Server**
 npm start
    or
-npm run dev- if nodemon is installed
+npm run dev (if nodemon is installed)
 
 **API Summary**
 | Method | Endpoint                             | Description                       |
